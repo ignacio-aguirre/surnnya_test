@@ -1,0 +1,15 @@
+<?php
+session_start();
+include("funciones.php");
+$ts=$_GET["tipo_solicitante"];
+$solicitante=$_GET["solicitante"];
+if($ts=="s"){
+	$_SESSION['hogar']="0";
+	$_SESSION['sector']=$solicitante;
+}
+else{
+ $_SESSION['hogar']=$solicitante;
+	$_SESSION['sector']="0";
+}	
+Redirect("mv_programar?adm");
+?>

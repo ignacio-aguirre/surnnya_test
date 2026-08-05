@@ -1,0 +1,66 @@
+<?php
+include("funciones.php");
+session_start();
+$hogar=$_SESSION["hogar"];
+$nnya=$_SESSION["nnnya_actual"];
+$trimestre=$_SESSION["trimestre"];
+$anio=$_SESSION["anio"];
+$trimestral=un_campo("select id from trimestrales where anio=".$anio." and trimestre=".$trimestre." and hogar=".$hogar." and legajo=".$nnya);
+$id=un_campo("select id from trim_salud_mental where hogar=".$hogar." and trimestre=".$trimestre." and anio=".$anio." and legajo=".$nnya);
+if(!$id>0) $id=inserte("insert into trim_salud_mental(hogar,trimestre,anio,legajo,trimestral) values(".$hogar.",".$trimestre.",".$anio.",".$nnya.",".$trimestral.")");
+$en_tratamiento=npost("en_tratamiento");
+$juris_em1=npost("juris_em1");
+$em_1=npost("em_1");
+$pm_1=tpost("pm_1");
+$juris_em2=npost("juris_em2");
+$em_2=npost("em_2");
+$pm_2=tpost("pm_2");
+$juris_em3=npost("juris_em3");
+$em_3=npost("em_3");
+$pm_3=tpost("pm_3");
+$juris_em4=npost("juris_em4");
+$em_4=npost("em_4");
+$pm_4=tpost("pm_4");
+$espec_sm1=npost("espec_sm1");
+$espec_sm2=npost("espec_sm2");
+$espec_sm3=npost("espec_sm3");
+$espec_sm4=npost("espec_sm4");
+$sm_internacion=npost("sm_internacion");
+$plan_medicacion=npost("plan_medicacion");
+$plan_detalle=tpost("plan_detalle");
+$plan_efector=npost("plan_efector");
+$sm_observaciones=tpost("sm_observaciones");
+$at_tuvo="0";
+if($_POST["at_tuvo"]=="on"){$at_tuvo="1";};
+$at_tuvo=npost("at_tuvo");
+$at_prestador=npost("at_prestador");
+$at_esquema=tpost("at_esquema");
+ejecute("update trim_salud_mental set
+en_tratamiento=".$en_tratamiento.", 
+juris_em1=".$juris_em1.",
+em_1=".$em_1.",
+pm_1=".$pm_1.",
+juris_em2=".$juris_em2.",
+em_2=".$em_2.",
+pm_2=".$pm_2.",
+juris_em3=".$juris_em3.",
+em_3=".$em_3.",
+pm_3=".$pm_3.",
+juris_em4=".$juris_em4.",
+em_4=".$em_4.",
+pm_4=".$pm_4.",
+espec_sm1=".$espec_sm1.",
+espec_sm2=".$espec_sm2.",
+espec_sm3=".$espec_sm3.",
+espec_sm4=".$espec_sm4.",
+sm_internacion=".$sm_internacion.",
+plan_medicacion=".$plan_medicacion.",
+plan_detalle=".$plan_detalle.",
+plan_efector=".$plan_efector.",
+sm_observaciones=".$sm_observaciones.",
+at_tuvo=".$at_tuvo.",
+at_prestador=".$at_prestador.",
+at_esquema=".$at_esquema.",
+usuario=".$_SESSION["usuario"].", fecha=curdate(), trimestral=".$trimestral." where id=".$id);
+Redirect("transicion?proximo=discapacidad&id=".$trimestral);
+?>

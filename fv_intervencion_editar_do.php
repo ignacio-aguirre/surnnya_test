@@ -1,0 +1,44 @@
+<?php
+session_start();
+include("Funciones.php");
+$id=npost("id");
+$fecha_ingreso=fpost("fecha_ingreso");
+$derivante=npost("derivante");
+$juzgado=tpost("juzgado");
+$expediente=tpost("expediente");
+$fecha_condiciones=fpost("fecha_condiciones");
+$fecha_asignacion=fpost("fecha_asignacion");
+$ccoo_asignacion=tpost("ccoo_asignacion");
+$efector=npost("efector");
+$m_asig1=npost("m_asig1");
+$m_asig2=npost("m_asig2");
+$m_asig3=npost("m_asig3");
+$m_asig4=npost("m_asig4");
+$intervenciones_previas=npost("intervenciones_previas");
+$adultos_convivientes=npost("adultos_convivientes");
+$adultos_noconvivientes=npost("adultos_noconvivientes");
+$profesionales=tpost("profesionales");
+$fecha_baja=fpost("fecha_baja");
+$motivo_baja=npost("motivo_baja");
+
+ejecute("update fv_participaciones set 
+ fecha_ingreso=".$fecha_ingreso.",
+ derivante=".$derivante.",
+ juzgado=".$juzgado.", 
+ expediente=".$expediente.",
+ intervenciones_previas=".$intervenciones_previas.",
+ adultos_convivientes=".$adultos_convivientes.",
+ adultos_noconvivientes=".$adultos_noconvivientes.",
+ fecha_condiciones=".$fecha_condiciones.",
+ fecha_asignacion=".$fecha_asignacion.", 
+ ccoo_asignacion=".$ccoo_asignacion.",
+ efector=".$efector.",
+ m_asig1=".$m_asig1.",
+ m_asig2=".$m_asig2.",
+ m_asig3=".$m_asig3.",
+ m_asig4=".$m_asig4.",
+ profesionales=".$profesionales.",
+ fecha_baja=".$fecha_baja.",
+ motivo_baja=".$motivo_baja." where id=".$id);
+Redirect("fv_intervenciones");
+?>
