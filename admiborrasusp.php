@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start(); 
 $_SESSION["prestacion"]="Eliminar Suspensi&oacute;n de Pedido de recurso";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])) header ("Location: .");
 registre();
 $iid=$_GET["iid"];

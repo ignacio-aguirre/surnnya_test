@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 noconsulta();
 $_SESSION["prestacion"]="Nuevo Pedido de Recurso";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 $lega=$_GET["legajo"];
 $fped=$_SESSION['DiaHoy'];

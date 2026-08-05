@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Horario";
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET['iid'];
 $desc="";
 $lune="";

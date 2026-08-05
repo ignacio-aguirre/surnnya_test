@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 noconsulta();
 $_SESSION["prestacion"]="Baja de caso PAE";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["id"];
 $r=un_registro("select pae_nomina.*,concat(apellidos,', ',nombres) as apyn from pae_nomina left join sujetos on pae_nomina.legajo=sujetos.legajo where pae_nomina.id=".$id);
 if($r["accion_amb"]=="BAJA" &&  ffec($r["f_baja"])==""){

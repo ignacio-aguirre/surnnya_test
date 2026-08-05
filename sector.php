@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Sector";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_GET["id"])) {Redirect(".");};
 $id=nget("id");
 $r=un_registro("select * from sectores where id=".$id);

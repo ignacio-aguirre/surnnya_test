@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Informe Visita";
-include("encabezado.php");
+include("encabezado-test.php");
 registre();
 $sql="select super_visita.*, dispositivos.*, hogares_ong.nombre as nong from super_visita left join dispositivos on dispositivos.id=super_hogar ";
 $sql=$sql."left join hogares_ong on ong=hogares_ong.id ";

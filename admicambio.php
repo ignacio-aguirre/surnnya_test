@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Cambio de dispositivo de alojamiento";
 //noconsulta();
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["iid"];
 $reg = un_registro("select admi_alta as alta, concat(Apellidos,', ',Nombres) as apyn, admi_hogar, nombre as hoga, Hogares_Mail, admi_legajo  from hogares_admision left join sujetos on legajo=admi_legajo left join dispositivos on dispositivos.id=admi_hogar where idhogares_admision=".$id);
 $hoga=$reg['hoga'];

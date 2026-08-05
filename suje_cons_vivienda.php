@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION['prestacion']="Informaci&oacute;n sobre Vivienda y Datos de Contacto";
-include('encabezado.php');
+include('encabezado-test.php');
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: .");
 registre();
 $lega= $_GET["legajo"];
@@ -12,7 +12,7 @@ $hogar=un_campo("select admi_hogar from hogares_admision where admi_alta is not 
 $tipo="";
 if ($lega=="" ) Redirect("Location: consultasujetos");
 if (isset($_GET["tipo"])) $tipo=$_GET["tipo"] ;
-$_SESSION["posicion"]="9";
+$_SESSION["posicion"]="8";
 include("mnu_superior.php");
 ?>
 </div>
@@ -127,7 +127,7 @@ function valida_vivienda(){
 <h3>Historial de Situaciones de Vivienda</h3>
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
-<thead><tr class="bg-primary"><td>Tipo Vivienda</td><td>Dispositivo/Lugar</td><td>Desde</td><td>Hasta</td></tr></thead>
+<thead><tr class="bg-primary text-white"><td>Tipo Vivienda</td><td>Dispositivo/Lugar</td><td>Desde</td><td>Hasta</td></tr></thead>
 <?php
 $dt=un_registro("select * from sujetos where legajo=".$lega);
 $conn=registros("select case when tipo_dispositivo=12 then 'Dispositivo Pre egreso' else 'Dispositivo Cuidados Alternativos' end as tipoviv, nombre as hogar, admi_alta, admi_baja

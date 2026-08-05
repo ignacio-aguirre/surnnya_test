@@ -2,7 +2,7 @@
 include('Funciones.php');
 session_start();
 $_SESSION["prestacion"]="Roles";
-include('encabezado.php');
+include('encabezado-test.php');
 if($_SESSION["menu"]=="mnu_dipp"){  die("Algo falló. Intento registrado");};
 ?>
 </div>

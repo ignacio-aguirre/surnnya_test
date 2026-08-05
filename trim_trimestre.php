@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Seleccionar Trimestre Activo";
-include("encabezado.php"); 
+include("encabezado-test.php"); 
 $par=un_registro("select * from parametros limit 1");
       $_SESSION["trimestre"]=$par["trimestre"];
       $_SESSION["anio"]=$par["trimestre_anio"];

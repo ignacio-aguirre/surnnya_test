@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 noconsulta();
 $_SESSION["prestacion"]="Edici&oacute;n Pedido de Recurso";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 $id=$_GET["iid"];
 $ped=un_registro("select * from hogares_admision where idhogares_admision=".$id);

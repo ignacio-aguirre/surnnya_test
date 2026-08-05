@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Subir Medida";
-include("encabezado.php");
+include("encabezado-test.php");
 $status = "Es obligatorio indicar la fecha de la medida y los d&iacute;as";
 
 if ($_POST["fecha"]!="" ) {

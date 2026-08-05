@@ -3,7 +3,7 @@ require("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Editar Datos Familia";
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["id"];
 $r=un_registro("select * from af_familias where idaf_familias=".$id);
 ?>

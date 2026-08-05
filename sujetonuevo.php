@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();  
 if($_SESSION["gl_nuevo_sujeto"]==0) Redirect("error_noautorizado");
 $_SESSION["prestacion"]="Ingresar Nuevo Sujeto";
-include("encabezado.php");
+include("encabezado-test.php");
 $ap="";
 $no="";
 $ed="";

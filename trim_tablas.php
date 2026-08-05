@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Valores de Tablas";
-include("encabezado.php"); 
+include("encabezado-test.php"); 
 $tipo=$_GET["tipo"];
 ?>
 </div>

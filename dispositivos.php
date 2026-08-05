@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 $frase="";
 if(isset($_GET["frase"])){$frase=$_GET["frase"];};
 $tipo="0";

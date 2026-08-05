@@ -4,7 +4,7 @@ session_start();
 noconsulta();
 $_SESSION["prestacion"]="Asignaci&oacute;n de Recurso";
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $iid=$_GET["iid"];
 $da = un_registro("select Apellidos, Nombres, admi_susp, admi_mots, admi_fped, hogares_de.deno as deriv, admi_deriv_cual, legajo from hogares_admision left join sujetos on legajo=admi_legajo left join tablas hogares_de on hogares_de.valo=admi_deriv and hogares_de.tipo='ADDER' where idhogares_admision=".$iid);
 $legajo=$da["legajo"];

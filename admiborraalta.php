@@ -4,7 +4,7 @@ session_start();
 $_SESSION["prestacion"]="Eliminar Ingreso a Hogar";
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["id"];
 $sql="select legajo, fecha_operacion, hogar,vacante from altasybajas  where idaltasybajas=".$id;
 $r = un_registro($sql);

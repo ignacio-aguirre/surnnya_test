@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Registrar ausentismo a acci&oacute;n programada";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $r=un_registro("select es_acciones.*, concat(apellidos,', ',nombres) as apyn, dispositivos.nombre from es_acciones 
    left join sujetos on es_acciones.legajo=sujetos.legajo 

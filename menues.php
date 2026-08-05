@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 $sql="select menues.*,
 (select count(*) from usuarios where perfil in (select perfiles.id from perfiles where menu_nuevo=idmenues) and usuarios.baja is null) as cantidad 
  from menues order by nombre";

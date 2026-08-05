@@ -7,7 +7,7 @@ if($_SESSION['gl_tablaongs']!="1") header("Location: error_noautorizado");
 $id=nget("id");
 $_SESSION["prestacion"]="Registrar fecha monitoreo";
 $r=un_registro("select * from dispositivos where dispositivos.id=".$id);
-include("encabezado.php");?>
+include("encabezado-test.php");?>
 </div>
 <div class="container">
 <form class="form" method="get" onsubmit="return valida()" action="dispositivo_monitoreo_do">

@@ -9,7 +9,7 @@ $conn=registros("select valo, concat(info,'-',deno) as denom from tablas where t
 $opci3="<option value=''>---Todos</option>";
 while ($da = mysqli_fetch_assoc($conn)) $opci3=$opci3."<option value='".$da['valo']."'>".$da['denom']."</option>";
 $_SESSION['prestacion']="Acciones";
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

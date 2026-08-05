@@ -23,7 +23,7 @@ if(apel!=""&&nomb!="") {} else {return false;};
 
 <?php
 $_SESSION["prestacion"]="Actualizacion de Datos Familiares";
-include("encabezado.php");
+include("encabezado-test.php");
 if($_SESSION["gl_editar_sujeto"]==0) header("Location: ".$_SESSION["menu"]);
 $_SESSION["posicion"]="3";
 $lega= $_GET["legajo"];

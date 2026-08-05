@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Funciones de Usuarios Multihogar";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $reg=registros("select usuarios_hogares_roles.*, nombre,ong from usuarios_hogares_roles left join dispositivos on hogar=dispositivos.id where usuario=".
 $id." order by nombre");

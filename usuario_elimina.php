@@ -5,7 +5,7 @@ if(!isset($_GET["vusuario"])) Redirect(".");
 $id=$_GET["vusuario"];
 $apyn=un_campo("select concat(apellido,', ',nombre) from usuarios where id=".$id);
 $_SESSION["prestacion"]="Eliminaci&oacute;n de Usuario ".$apyn;
-include("encabezado.php");
+include("encabezado-test.php");
 
 ?>
 </div>

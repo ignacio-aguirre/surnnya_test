@@ -4,7 +4,7 @@ session_start();
 $prestacion="Ingreso en Hogar";
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $iid=$_GET["iid"];
 $fech=$_SESSION["DiaHoy"];
 $r = un_registro("select admi_hogar,apellidos, nombres, admi_fderiv, case when tipo_dispositivo=1 then concat('AF: ',af_familias.denominacion) else nombre end as hogar, case when tipo_dispositivo=1 then admi_fami else 0 end as familia,case when tipo_dispositivo=1 then af_familias.estado1 else 0 end as estado1,case when tipo_dispositivo=1 then af_familias.tipo_prestacion else 0 end as estado2, legajo from hogares_admision left join af_familias on admi_fami=idaf_familias left join sujetos on legajo=admi_legajo left join dispositivos on dispositivos.id=admi_hogar where idhogares_admision=".$iid);

@@ -3,7 +3,7 @@ session_start();
 include("Funciones.php");
 $entorno=un_campo("select entorno from parametros");
 $_SESSION["prestacion"]="Cambios en versiones del sistema - entorno: ".$entorno;
-include("encabezado.php");
+include("encabezado-test.php");
 
 ?>
 <div class="container">

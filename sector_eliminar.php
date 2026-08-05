@@ -2,7 +2,7 @@
 session_start();
 include("Funciones.php");
 $_SESSION["prestacion"]="Eliminar Sector";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $r=un_registro("select * from sectores where id=".$id);
 ?>

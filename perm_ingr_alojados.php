@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])) Redirect("salir");
 $sino="<option value=1>Si</option><option value=0>No</option>";
 ?>

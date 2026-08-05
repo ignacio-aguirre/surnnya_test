@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 noconsulta();
 $_SESSION["prestacion"]="Baja de Casa Joven";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["id"];
 $legajo=un_campo("select legajo from cjoven_nomina where idcjoven_nomina=".$id);
 ?>

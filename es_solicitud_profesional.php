@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Asignar Profesional a Solicitud Equipo de Salud";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $retorno=$_GET["retorno"];
 $r=un_registro("select * from es_participaciones where id=".$id);

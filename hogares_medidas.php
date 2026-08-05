@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 $id=$_GET["id"];
 $_SESSION["prestacion"]="Intervenciones con la Familia ".un_campo("select descripcion from fv_familias where idfv_familias=".$id);
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

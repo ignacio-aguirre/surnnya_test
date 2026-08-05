@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 $dispositivo=$_SESSION["gldispo"];
 if(isset($_GET["dispositivo"])) $dispositivo=$_GET["dispositivo"];  
 ?>

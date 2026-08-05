@@ -6,7 +6,7 @@ $r=un_registro("select apellidos,nombres from sujetos where legajo=".$legajo);
 $prestacion="Ingreso en Dispositivo de Pre egreso";
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $fech=$_SESSION["DiaHoy"];
 ?>
 

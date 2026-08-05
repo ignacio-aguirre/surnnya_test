@@ -6,7 +6,7 @@ if($_SESSION['gl_tablaongs']!="1"){Redirect("error_noautorizado");};
 $id=nget("id");
 $_SESSION["prestacion"]="Datos ONG";
 $r=un_registro("select * from hogares_ong where id=".$id);
-include("encabezado.php");?>
+include("encabezado-test.php");?>
 </div>
 <div class="container">
 <form class="form-inline" method="get" onsubmit="return valida()" action="una_ong_do">

@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");?>
+include("encabezado-test.php");?>
 </div>
 <div class="container">
 <button class="btn-success" onclick='navega("hogares_lista")'>Excel</button><br><br>

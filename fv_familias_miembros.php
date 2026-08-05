@@ -4,7 +4,7 @@ session_start();
 $id=$_GET["id"];
 $_SESSION["temp_ffv"]=$id;
 $_SESSION["prestacion"]="Miembros de la Familia ".un_campo("select descripcion from fv_familias where idfv_familias=".$id);
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

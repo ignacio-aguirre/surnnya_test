@@ -4,7 +4,7 @@ session_start();
 $prestacion="Gesti&oacute;n de Recurso";
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $iid=$_GET["iid"];
 $da = un_registro("select admi_legajo, apellidos, nombres, etapa, fecha_etapa, admi_hogar from hogares_admision left join sujetos on legajo=admi_legajo where idhogares_admision=".$iid);
 if(isset($_GET['fecha'])) {

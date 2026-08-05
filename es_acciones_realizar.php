@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Pasar de estado programadas a realizadas";
-include("encabezado.php");
+include("encabezado-test.php");
 $fini=un_campo("select min(fecha) from es_acciones where estado=1 and year(fecha)>=2025");
 $ffin=un_campo("select max(fecha) from es_acciones where estado=1 and fecha<=curdate()");
 

@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Menues";
 if ($_SESSION['gl_usuarios']!="1") redirect('error_noautorizado');
-include("encabezado.php");
+include("encabezado-test.php");
 $id= nget("id");
 $sql="select * from menues where idmenues=".$id;
 $reg=registros($sql);;

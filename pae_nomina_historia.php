@@ -2,7 +2,7 @@
 include("Funciones.php"); 
 session_start();
 $_SESSION["prestacion"]="Historial de Etapas de Inclusi&oacute;n en PAE";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 registre();
 $id=$_GET["id"];

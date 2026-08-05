@@ -18,7 +18,7 @@ $titulo=un_campo("select titulo from menues_superiores where menu=".$idmenu." an
 
 $_SESSION["prestacion"]=$titulo;
 
-include("encabezado.php");
+include("encabezado-test.php");
 
 registre();
 

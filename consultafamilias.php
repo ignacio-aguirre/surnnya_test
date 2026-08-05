@@ -1,7 +1,7 @@
 <?php 
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 registre();
 $hoga= "";
 if(isset($_GET['hogar'])) $hoga=$_GET['hogar'];

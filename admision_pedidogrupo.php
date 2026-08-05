@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Replicar Pedido en miembros del grupo";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $lega=nget("legajo");
 $grup=un_campo("select grupo from grupos_legajos where grupo_legajo=".$lega);

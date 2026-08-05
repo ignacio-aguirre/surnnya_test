@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("Funciones.php");
-include("encabezado.php");
+include("encabezado-test.php");
 $direccion=$_GET["direccion"];
 ?>
 </div>

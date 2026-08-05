@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 registre();
 $hoga="";
 $fini="01".substr($_SESSION['DiaHoy'],2);

@@ -4,7 +4,7 @@ session_start();
 $id=nget("id");
 $r=un_registro("select * from reportes where id=".$id);
 $_SESSION["prestacion"]=si($id=="0","Nuevo Reporte","Editar Reporte Id=".$id);
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

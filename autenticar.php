@@ -37,7 +37,7 @@ if($reg["id"]>"0"){
   $mail->ClearAddresses();
   $_SESSION["prestacion"]="Autenticaci&oacute;n";
 $_SESSION["login"]="1";
-include("encabezado.php");
+include("encabezado-test.php");
 unset($_SESSION['glidusua']);
  }
  else{

@@ -3,7 +3,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Consulta Datos Adicionales PAE del Sujeto";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: salir");
 registre();
 $lega= $_GET["legajo"];

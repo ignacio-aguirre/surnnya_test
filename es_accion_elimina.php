@@ -2,7 +2,7 @@
 session_start();
 include("Funciones.php");
 $_SESSION["prestacion"]="Eliminaci&oacute;n de Acci&oacute;n";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $a=un_registro("select * from es_acciones where id=".$id);
 $solicitud=$a["solicitud"];

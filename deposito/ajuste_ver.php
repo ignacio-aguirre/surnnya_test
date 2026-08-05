@@ -2,7 +2,7 @@
 include("funciones.php");
 session_start();
 $_SESSION["prestacion"]="Ver un Ajuste";
-include("encabezado.php"); 
+include("encabezado-test.php"); 
 $id=nget("id");
 ?>
 </div>

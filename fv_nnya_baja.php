@@ -5,7 +5,7 @@ $familia=$_GET["familia"];
 $legajo=$_GET["legajo"];
 $r=un_registro("select fecha_alta, fecha_baja from fv_familias_miembros where familia=".$familia." and legajo=".$legajo);
 $_SESSION["prestacion"]="Baja de NNYA de una Familia ";
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

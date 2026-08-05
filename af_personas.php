@@ -2,7 +2,7 @@
 require("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Registro de Personas";
-include("encabezado.php");
+include("encabezado-test.php");
 if(isset($_GET["identificador"])) {
  $identificador=$_GET["identificador"];
  $apellidos=tsql($_GET["apellidos"]);

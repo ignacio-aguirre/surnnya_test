@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Nueva Solicitud de Intervenci&oacute;n";
-include("encabezado.php");
+include("encabezado-test.php");
 $legajo=nget("legajo");
 if($legajo=="null"){$legajo="";};
 $cant=un_campo("select count(*) from fv_participaciones where legajo<0 and usuario=".tsql($_SESSION["glusua"]));

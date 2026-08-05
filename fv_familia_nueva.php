@@ -2,7 +2,7 @@
 require("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Nueva Familia";
-include("encabezado.php");
+include("encabezado-test.php");
 noconsulta();
 $localidades = $_SESSION['loc_caba'];
 ?>

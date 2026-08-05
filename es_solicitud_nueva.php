@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Nueva Solicitud a Equipo de Salud";
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

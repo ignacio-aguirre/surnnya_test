@@ -14,7 +14,7 @@ return true;
 $_SESSION["prestacion"]="Datos Escolares/Educativos";
 if (!isset($_SESSION['gldispo'])) header ("Location: index.php");
 if($_SESSION["gl_editar_sujeto"]==0) header("Location: ".$_SESSION["menu"]);
-include("encabezado.php");
+include("encabezado-test.php");
 $lega= $_GET["legajo"];
 include("mnu_superior.php");
 $sinn="<option value=''>S/D</option><option value='1'>Si</option><option value='0'>No</option>";

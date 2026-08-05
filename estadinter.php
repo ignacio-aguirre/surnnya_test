@@ -9,7 +9,7 @@ $sql="select valo, concat(info,'-',deno) as denom from tablas where tipo='TINT' 
 $conn = registros($sql);
 $opci3="";
 while ($da = mysqli_fetch_assoc($conn)) $opci3=$opci3."<option value='".$da['valo']."'>".$da['denom']."</option>";
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

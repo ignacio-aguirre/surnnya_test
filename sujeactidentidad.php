@@ -4,7 +4,7 @@ session_start();
 if($_SESSION["gl_editar_sujeto"]==0) Redirect($_SESSION["menu"]);
 registre();
 $_SESSION["prestacion"]="Actualizacion de Datos de Sujeto";
-include("encabezado.php");
+include("encabezado-test.php");
 $lega= $_GET["legajo"];
 if ($lega== "" ) Redirect($_SESSION["menu"]);
 $opci = $_SESSION['loc_gene'];

@@ -3,7 +3,7 @@ require("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Registro de Grupos de Familias en Seguimiento";
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["id"];
 ?>
 

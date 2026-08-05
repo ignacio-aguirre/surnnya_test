@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 if($_SESSION['glidperfil']!="72"){
 //Redirect($_SESSION["menu"]);
 die($_SESSION['glidperfil']);

@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Nuevo Usuario";
 if ($_SESSION['gl_usuarios']!="1") redirect('error_noautorizado');
-include("encabezado.php");
+include("encabezado-test.php");
 $dis =registros("select id, denominacion from sectores where baja is null order by denominacion");
 $dispo ="";
 while ($d = mysqli_fetch_assoc($dis)) {

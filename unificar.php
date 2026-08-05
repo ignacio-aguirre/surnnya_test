@@ -6,7 +6,7 @@ $_SESSION["prestacion"]="Unificar legajos de un mismo Nnya";
 //if($_SESSION["glidperfil"]!=7) Redirect($_SESSION["menu"]);
 $leg1="";
 $leg2="";
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Grupos de Hermanos / Materno - Composici&oacute;n";
-include("encabezado.php");
+include("encabezado-test.php");
 if($_SESSION['gl_editar_sujeto']==0) Redirect("salir");
 registre();
 $id="";

@@ -2,7 +2,7 @@
 session_start();
 include("Funciones.php");
 $_SESSION["prestacion"]="Eliminaci&oacute;n de Solicitud";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $cnt=un_campo("select count(*) from es_acciones where solicitud=".$id);
 if($cnt=="0"){

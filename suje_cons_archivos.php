@@ -2,7 +2,7 @@
 session_start();
 include('Funciones.php');
 $_SESSION['prestacion']="Archivos Subidos al Legajo";
-include('encabezado.php');
+include('encabezado-test.php');
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: index");
 registre();
 $lega= $_GET["legajo"];
@@ -18,7 +18,7 @@ Subir Nuevo <a href="subir_archivos?legajo=<?php echo $lega;?>">Archivo</a>&nbsp
 <h2>Archivos Vinculados</h2>
 <div class="table-responsive pre-scrollable">
 <table class="table table-striped table-bordered table-condensed">
-<thead><tr class='bg-primary' style='font-size:.80em;'><th>Tipo</th><th>Descripci&oacute;n</th><th>Fecha Doc.</th><th>Efector - Usuario</th><th>Fecha Subida</th><th>Acciones</th></tr></thead>
+<thead><tr class="bg-primary text-white" style='font-size:.80em;'><th>Tipo</th><th>Descripci&oacute;n</th><th>Fecha Doc.</th><th>Efector - Usuario</th><th>Fecha Subida</th><th>Acciones</th></tr></thead>
 <tbody id='cuerpo'>
 </tbody>
 </table>

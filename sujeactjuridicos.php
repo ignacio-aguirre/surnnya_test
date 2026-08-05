@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Actualizaci&oacute;n Datos Jur&iacute;dicos";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 if($_SESSION["gl_editar_sujeto"]==0) header("Location: ".$_SESSION["menu"]);
 registre();

@@ -2,7 +2,7 @@
 session_start();
 include('Funciones.php');
 $_SESSION["prestacion"]="Predescarga de documentos Excel";
-include("encabezado.php");
+include("encabezado-test.php");
 $nombre=$_GET["nombre"];
 $cuil=un_campo("select cuil from usuarios where id=".$_SESSION["glidusua"]);
 $pth="archivos/temp/".$cuil."/".$nombre;

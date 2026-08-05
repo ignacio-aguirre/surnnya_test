@@ -4,7 +4,7 @@ include("Funciones.php");
 $_SESSION["prestacion"]="Editar datos de Profesional";
 $id=nget("id");
 $r=un_registro("select * from es_profesionales where id=".$id);
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

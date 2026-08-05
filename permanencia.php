@@ -14,7 +14,7 @@ return true;
 <?php
 if (!isset($_SESSION['gldispo'])) header ("Location: index.php");
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $hasta="";
 $desde="";
 if(isset($_GET['hasta'])) {$hasta=$_GET['hasta'];$desde=$_GET['desde'];};

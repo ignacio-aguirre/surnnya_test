@@ -2,21 +2,21 @@
 session_start();
 include('Funciones.php');
 $_SESSION['prestacion']="Registro Gabinete de Salud";
-include('encabezado.php');
+include('encabezado-test.php');
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: index");
 registre();
 $lega= $_GET["legajo"];
 $tipo="";
 if ($lega=="" ) Redirect("Location: consultasujetos");
 if (isset($_GET["tipo"])) $tipo=$_GET["tipo"] ;
-$_SESSION["posicion"]="5";
+$_SESSION["posicion"]="7";
 include("mnu_superior.php");
 ?>
 </div>
 <div class="container">
 <div class="table-responsive">
 	<table class="table-condensed">
-	<tr class="bg-primary" style="font-size:.9em"><th>Fecha Solicitud</th><th>Fecha Acci&oacute;n</th><th>Dispositivo</th><th>Tipo Acci&oacute;n</th><th>Profesi&oacute;n</th><th>Estado</th><th>Observaciones</th></tr>
+	<tr class="bg-primary text-white" style="font-size:.9em"><th>Fecha Solicitud</th><th>Fecha Acci&oacute;n</th><th>Dispositivo</th><th>Tipo Acci&oacute;n</th><th>Profesi&oacute;n</th><th>Estado</th><th>Observaciones</th></tr>
 	<?php
 	$reg=registros("select es_participaciones.*,nombre from es_participaciones left join dispositivos on solicitante=dispositivos.id where legajo=".$lega." and fecha_rechazo is null order by fecha_ingreso desc");
 	while($r=mysqli_fetch_assoc($reg)){

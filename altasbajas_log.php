@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $fini="01".substr($_SESSION['DiaHoy'],2);
 $ffin=$_SESSION['DiaHoy'];
 

@@ -2,7 +2,7 @@
 include("Funciones.php"); 
 session_start();
 $_SESSION["prestacion"]="Desvincular Archivos de un Alta";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 registre();
 

@@ -2,7 +2,7 @@
 session_start();
 include("Funciones.php");
 $_SESSION["prestacion"]="Acciones Gabinete Salud";
-include("encabezado.php");
+include("encabezado-test.php");
 $desde="";
 $hasta="";
 if(isset($_GET["desde"])){

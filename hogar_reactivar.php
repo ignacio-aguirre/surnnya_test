@@ -2,7 +2,7 @@
 session_start();
 include("Funciones.php");
 $_SESSION["prestacion"]="Reactivar un hogar";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["id"];
 $descripcion=un_campo("select nombre from dispositivos where dispositivos.id=".$id);
 ?>

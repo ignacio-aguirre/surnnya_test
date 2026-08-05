@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Documentos Asociados a Hogares";
-include("encabezado.php");
+include("encabezado-test.php");
 $retorno=$_SESSION["menu"];
 $id=$_GET["id"];
 $da = un_registro("select * from dispositivos where dispositivos.id=".$id);

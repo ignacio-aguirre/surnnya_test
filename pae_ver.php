@@ -2,7 +2,7 @@
 include("Funciones.php"); 
 session_start();
 $_SESSION["prestacion"]="Datos inclusi&oacute;n PAE";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["id"];
 $r=un_registro("select pae_nomina.*,concat(apellidos,', ',nombres) as apyn,edadcalc(f_nacimiento,sujetosEdad,SujetosMeses,SujetosActEdad,curdate()) as edad_calc,
 apellidos,nombres,sujetosdni,cuil,f_nacimiento,rib_anio,rib_numero,rib_reparticion,paises.descripcion,telefonos,email from pae_nomina left join sujetos on pae_nomina.legajo=sujetos.legajo 

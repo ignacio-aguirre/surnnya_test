@@ -2,7 +2,7 @@
 include("funciones.php");
 session_start();
 $_SESSION["prestacion"]="Archivo Subido";
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 <div class="container">
 <h3>Se ha detectado un archivo para procesar</h3>

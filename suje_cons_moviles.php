@@ -2,7 +2,7 @@
 session_start();
 include('Funciones.php');
 $_SESSION['prestacion']="Uso de m&oacute;viles";
-include('encabezado.php');
+include('encabezado-test.php');
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: index");
 registre();
 $lega= $_GET["legajo"];

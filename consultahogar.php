@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 $id=$_GET["id"];
 $_SESSION["prestacion"]="Acciones y Archivos del Hogar ".un_campo("select nombre from dispositivos where dispositivos.id=".$id);
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION["gldispo"])) header ("Location: salir");
 $da = registros("select idhogares_intervenciones as id, fecha, deno, supervisores, texto, usuario from hogares_intervenciones left join tablas on tablas.tipo='TINTH' and valo=hogares_intervenciones.tipo where hogar=".$id." and hogares_intervenciones.baja is null order by fecha desc");
 ?>

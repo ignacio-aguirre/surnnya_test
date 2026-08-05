@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Cambio de estado de Solicitud a Equipo de Salud";
-include("encabezado.php");
+include("encabezado-test.php");
 $solicitud=nget("solicitud");
 $estado=$_GET["estado"];
 $r=un_registro("select * from es_participaciones where id=".$solicitud);

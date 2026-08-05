@@ -5,7 +5,7 @@ if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 registre();
 $desd=$_SESSION["DiaHoy"];
 $hast=$_SESSION["DiaHoy"];
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 <div class="container">
 <form class="form-inline" method="get" action="excel-af2">

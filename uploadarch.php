@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Subida de Archivos";
-include("encabezado.php");
+include("encabezado-test.php");
 $status = "Es obligatorio indicar el tipo de archivo y una descripción del mismo";
 
 if (

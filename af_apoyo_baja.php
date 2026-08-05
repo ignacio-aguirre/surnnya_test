@@ -2,7 +2,7 @@
 require("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Baja de apoyo en proceso de acogimiento familiar";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $apo=un_registro("select af_apoyos.*, denominacion from af_apoyos left join af_familias on idaf_familias=familia where id=".$id);
 $a=un_registro("select hogares_admision.*, apellidos, nombres, af_familias.denominacion, dispositivos.nombre from 

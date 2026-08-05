@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Consulta Datos Jur&iacute;dicos del Sujeto";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: salir");
 registre();
 $lega= $_GET["legajo"];
@@ -19,14 +19,14 @@ include("mnu_superior.php");
 <strong>Juzgado Interviniente </strong>
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
-<thead><tr class="bg-primary"><td>Fuero y Nro.</td><td>Expediente</td><td>Car&aacute;tula</td></tr></thead>
+<thead><tr class="bg-primary text-white"><td>Fuero y Nro.</td><td>Expediente</td><td>Car&aacute;tula</td></tr></thead>
 <tr><td><strong><?php echo un_campo("select deno from tablas where tipo='TJ' and valo=".nulea($dj['juzgado_modalidad']))." ".$dj['juzgado_numero'];?></td><td><strong><?php echo $dj['juzgado_expediente'];?></td><td><strong><?php echo $dj['juzgado_caratula'];?></td></tr>
 </table>
 </div>
 <Strong>Organismos de Promoci&oacute;n y Protecci&oacute;n de Derechos</Strong>
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
-<thead><tr class="bg-primary"><td>Defensor&iacute;a Zonal</td><td>Equipo</td><td>Tipo Medida</td><td>Zonal Provincial</td></tr></thead>
+<thead><tr class="bg-primary text-white"><td>Defensor&iacute;a Zonal</td><td>Equipo</td><td>Tipo Medida</td><td>Zonal Provincial</td></tr></thead>
 <tr><td><strong><?php echo $sector."</td><td>".$dj['equipo'];?>
 </td><td><strong><?php echo un_campo("select deno from tablas where tipo='TM' and valo=".nulea($dj['tipo_medida']));?>
 </td><td><strong><?php echo un_campo("select deno from tablas where tipo='ZP' and valo=".nulea($dj['zonal_provincial']));?></td></tr>
@@ -43,7 +43,7 @@ function valida_campos(){
 <form action="uploadmedida" method="post" enctype="multipart/form-data" onsubmit="return valida_campos()">
 <div class="table-responsive">
 <table style="font-size:.9em" class="table table-striped table-bordered table-condensed">
-<thead><tr class="bg-primary"><td>Fecha</td><td>D&iacute;as</td><td>Vencimiento</td><td>Acto adm</td><td>Archivo/F.subida</td><td></td></tr></thead>
+<thead><tr class="bg-primary text-white"><td>Fecha</td><td>D&iacute;as</td><td>Vencimiento</td><td>Acto adm</td><td>Archivo/F.subida</td><td></td></tr></thead>
 <tr><td><input id="fecha" name="fecha" size="8" maxlength="10" onblur=valida_fecha(this.id)></td><td>
 <input id="dias" name="dias" size="3" maxlength="3" onblur="valida_entero(this.id)"></td><td></td><td><input name="acto_administrativo"
 id="acto_administrativo" size="25" maxlength="40"></td><td><input name="archivo" id="archivo" type="file" size="35" /></td>

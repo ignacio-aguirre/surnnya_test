@@ -2,9 +2,9 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Informes Trimestrales del NNYA";
-include("encabezado.php");
+include("encabezado-test.php");
 $lega= $_GET["legajo"];
-$_SESSION["posicion"]="7";
+$_SESSION["posicion"]="6";
 include("mnu_superior.php");
 ?>
 <div class="container">
@@ -14,7 +14,7 @@ include("mnu_superior.php");
 ?>
 <div class="table-responsive">
 <table class="table">
-<tr class="bg-primary"><th>A&ntilde;o</th><th>Trimestre</th><th>Dispositivo</th><th></th></tr>
+<tr class="bg-primary text-white"><th>A&ntilde;o</th><th>Trimestre</th><th>Dispositivo</th><th></th></tr>
  <?php 
       
 	while($r=mysqli_fetch_assoc($reg)){

@@ -5,7 +5,7 @@ noconsulta();
 $_SESSION["Prestacion"]="Gesti&oacute;n de Recurso";
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 $grup=$_GET["igru"];
-include("encabezado.php");
+include("encabezado-test.php");
 if(isset($_GET['fecha'])) {
   $reg=registros("select admi_legajo, idhogares_admision as admi, etapa, fecha_etapa, admi_hogar from hogares_admision 
    left join sujetos on legajo=admi_legajo left join grupos_legajos on grupos_legajos.grupo_legajo=admi_legajo

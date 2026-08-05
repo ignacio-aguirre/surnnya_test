@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Editar Estado Registro de Acci&oacute;n Equipo de Salud";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $r=un_registro("select * from es_acciones left join tablas on tablas.tipo='ESEA' and valo=estado where id=".$id);
 $s=un_registro("select * from es_participaciones where id=".nulea($r["solicitud"]));

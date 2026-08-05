@@ -2,7 +2,7 @@
 include("Funciones.php"); 
 session_start();
 $_SESSION["prestacion"]="Eliminar Pedido de Recurso";
-include("encabezado.php");?>
+include("encabezado-test.php");?>
 
 <script type="text/javascript">
 

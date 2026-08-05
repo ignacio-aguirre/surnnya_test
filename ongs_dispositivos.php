@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Dispositivos Vinculados a la ONG";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["id"];
 ?>
 </div>

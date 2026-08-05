@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start(); 
 $_SESSION["prestacion"]="Eliminar Asignaci&oacute;n de Hogar a un recurso";
-include("encabezado.php");
+include("encabezado-test.php");
 registre();
 $iid=$_GET["iid"];
 $sql="select Apellidos, Nombres, admi_fderiv, nombre as hogar from hogares_admision left join sujetos on legajo=admi_legajo left join dispositivos on dispositivos.id=admi_hogar where idhogares_admision=".$iid;

@@ -2,7 +2,7 @@
 session_start();
 include("Funciones.php");
 $_SESSION["prestacion"]="Consulta de Usuarios Activos";
-include("encabezado.php");
+include("encabezado-test.php");
 $frase="";
 if (isset($_GET["frase"])) $frase=trim($_GET["frase"]);
 ?>

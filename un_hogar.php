@@ -6,7 +6,7 @@ if($_SESSION['gl_tablahogares']!="1") header("Location: error_noautorizado");
 $id=$_GET['id'];
 $r=un_registro("select * from dispositivos where dispositivos.id=".$id); 
 $_SESSION["prestacion"]="Editar Dispositivo de Cuidado ".$r["nombre"];
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

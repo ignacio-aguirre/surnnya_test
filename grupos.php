@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Grupos de Hermanos / Grupos Maternos";
-include("encabezado.php");
+include("encabezado-test.php");
 noconsulta();
 if($_SESSION['gl_editar_sujeto']==0) Redirect($_SESSION["menu"]);
 ?>

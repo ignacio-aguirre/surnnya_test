@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Opciones Vivienda";
-include("encabezado.php");
+include("encabezado-test.php");
 $legajo=nget("legajo");
 $apynom=un_campo("select concat(apellidos,', ',nombres) as apy from sujetos where legajo=".$legajo);
 ?>

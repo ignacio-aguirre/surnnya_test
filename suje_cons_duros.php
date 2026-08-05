@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Consulta Datos del NNYA y Acciones";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: salir");
 registre();
 $lega= $_GET["legajo"];
@@ -46,7 +46,7 @@ navega("copiarlegajo?legajo="+"<?php echo $lega;?>");
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
 <thead>
-<tr class="bg-primary"><th>Apellidos</th><th>Nombres</th><th>Otros Nombres</th><th>Documento Identidad</th></tr>
+<tr class="bg-primary text-white"><th>Apellidos</th><th>Nombres</th><th>Otros Nombres</th><th>Documento Identidad</th></tr>
 </thead>
 <?php $dz=un_campo("select defensoria_zonal from sujetos where legajo=".$lega);
 $sector=un_campo("select deno from tablas where tipo='CM' and valo=".nulea($dz));?>
@@ -63,7 +63,7 @@ $sector=un_campo("select deno from tablas where tipo='CM' and valo=".nulea($dz))
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
 <thead>
-<tr class="bg-primary">
+<tr class="bg-primary text-white">
 <th>F.Nacimiento</th><th>Edad Hoy</th><th>Nacionalidad</th><th>Sexo s/DNI</th><th>Id. de G&eacute;nero</th>
 </tr>
 </thead>
@@ -81,7 +81,7 @@ $sector=un_campo("select deno from tablas where tipo='CM' and valo=".nulea($dz))
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
 <thead>
-<tr class="bg-primary">
+<tr class="bg-primary text-white">
 <th>&Uacute;ltima Residencia Familiar Referida</th>
 </thead>
 <tbody>
@@ -93,7 +93,7 @@ $sector=un_campo("select deno from tablas where tipo='CM' and valo=".nulea($dz))
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
 <thead>
-<tr class="bg-primary"><th>Sit. Calle - Localidad</th><th>Lugar</th></tr>
+<tr class="bg-primary text-white"><th>Sit. Calle - Localidad</th><th>Lugar</th></tr>
 </thead>
 <tbody>
 <tr><td><?php echo $dt['loca'];?></td><td><?php echo $dt['lugparada'];?></td></tr>
@@ -103,7 +103,7 @@ $sector=un_campo("select deno from tablas where tipo='CM' and valo=".nulea($dz))
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
 <thead>
-<tr class="bg-primary"><th>RIB</th><th>Sector</th><th>CUIL</th></tr>
+<tr class="bg-primary text-white"><th>RIB</th><th>Sector</th><th>CUIL</th></tr>
 </thead>
 <tbody>
 <tr><td><strong><?php echo rib2($dt)."</td><td><strong>".$sector;?></td>
@@ -114,7 +114,7 @@ $sector=un_campo("select deno from tablas where tipo='CM' and valo=".nulea($dz))
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
 <thead>
-<tr class="bg-primary">
+<tr class="bg-primary text-white">
 <th>Efector</th>
 <th>Legajo</th>
 <th>Estado</th>
@@ -138,7 +138,7 @@ while ( $da = mysqli_fetch_assoc($conn))
 <h3>Archivos subidos asociados con identidad</h3>
 <div class="table-responsive">
 <table class="table-condensed">
-<tr class="bg-primary"><th>Tipo</th><th>Descripci&oacute;n</th><th>Descargar</th></tr>
+<tr class="bg-primary text-white"><th>Tipo</th><th>Descripci&oacute;n</th><th>Descargar</th></tr>
 <?php
 $arc=registros("select tablas.deno, as_descripcion, as_path,idarchivos_subidos from archivos_vinculos left join archivos_subidos on archivo=idarchivos_subidos 
 left join tablas on tablas.tipo='TA' and valo=as_tipo 
@@ -161,7 +161,7 @@ function filtra(){
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
 <thead>
-<tr class="bg-primary">
+<tr class="bg-primary text-white">
 <th>Efector</th><th>Fecha</th><th>D/S</th><th>Tipo</th>
 <th>Instituci&oacute;n</th><th>Agente</th>
 </tr>

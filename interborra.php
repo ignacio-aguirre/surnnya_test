@@ -11,7 +11,7 @@ Redirect($reto);
 }
 else
 {
-include("encabezado.php");
+include("encabezado-test.php");
 $sql="select *, date_format(inter_fecha,'%d/%m/%Y') as fecha, sectores.denominacion as dispo, tablas.deno as tipo from intervenciones
  left join sectores on inter_dispo=sectores.id
  left join tablas on tablas.tipo='TINT' and inter_tipo=valo 

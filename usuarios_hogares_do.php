@@ -4,7 +4,7 @@ include("Funciones.php");
 if(isset($_GET["excel"])){Redirect("usuarios_hogares_excel");};
 $hogar=nget("hogar");
 $_SESSION["prestacion"]="Usuarios del Dispositivo ".un_campo("select nombre from dispositivos where dispositivos.id=".$hogar);
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

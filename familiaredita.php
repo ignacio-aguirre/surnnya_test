@@ -64,7 +64,7 @@ ejecute($sql);
 
 Redirect("sujeactfamilia?legajo=".$_GET['lega']);
 };
-include("encabezado.php");
+include("encabezado-test.php");
 $fami=$_GET["id"];
 
 $dt =un_registro("select * from sujetos_familia inner join sujetos on fami_legajo=legajo where idsujetos_familia=".$fami);

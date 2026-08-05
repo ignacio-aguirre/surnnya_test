@@ -5,7 +5,7 @@ if($_SESSION['gl_tablaongs']!="1") {header("Location: error_noautorizado");};
 $frase="";
 if(isset($_GET["frase"])) {$frase=$_GET["frase"];};
 $_SESSION["prestacion"]="Datos del Monitoreo (en desarrollo)";
-include("encabezado.php");?>
+include("encabezado-test.php");?>
 </div>
 <div class="container">
 <form class="form-inline" method="get">

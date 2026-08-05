@@ -23,7 +23,7 @@ if(isset($_GET["dispositivo"])) $dispositivo=$_GET["dispositivo"];
 if(isset($_GET["altabaja"])) {if($tipo=="") {$tipo="23";};$altabaja=$_GET["altabaja"];};
 if(isset($_GET["visita"])) $visita=$_GET["visita"];
 if(isset($_GET["ong"])) $ong=$_GET["ong"];
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 
 </div>

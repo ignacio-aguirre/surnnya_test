@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php"); 
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 registre();
 $opci=str_replace("Completar","Todas",$_SESSION["Opc_Hoga_Cate"]);
 $hasta=$_SESSION['DiaHoy'];

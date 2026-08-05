@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Esperar finalizaci&oacute;n de Proceso Autom&aacute;tico";
-include("encabezado.php");
+include("encabezado-test.php");
 $url=$_GET["url"];
 ?>
 </div>

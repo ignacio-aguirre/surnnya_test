@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 registre();
 $sql="select localidades_nueva.*, paises.descripcion as npais from localidades_nueva left join paises on pais=idpaises where localidades_nueva.baja is null order by nombre";
 $dato = registros($sql);

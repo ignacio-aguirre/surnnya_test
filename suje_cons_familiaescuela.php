@@ -6,7 +6,7 @@ session_start();
 
 $_SESSION["prestacion"]="Datos Familiares y Escolaridad";
 
-include("encabezado.php");
+include("encabezado-test.php");
 
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: index");
 
@@ -48,7 +48,7 @@ function muestraContenido3() {
 <h3>Grupo Familiar o Conviviente <a href='sujeactfamilia?legajo=<?php echo $lega;?>'>Modificar</a></h3>
 <div class="responsive-table">
 <table class="table">
-<tr class="bg-primary" style="font-size:.8em"><th>Parentesco</th><th>Apellidos</th><th>Nombres</th><th>Edad</th><th>Meses</th><th>F.Act.</th><th>Vive</th><th>Ocupaci&oacute;n</th><th>Telefonos</th><th>Domicilio</th><th>Observaciones</th></tr>
+<tr class="bg-primary text-white" style="font-size:.8em"><th>Parentesco</th><th>Apellidos</th><th>Nombres</th><th>Edad</th><th>Meses</th><th>F.Act.</th><th>Vive</th><th>Ocupaci&oacute;n</th><th>Telefonos</th><th>Domicilio</th><th>Observaciones</th></tr>
 
 <?php 
   $conn = registros("select *, fami_actedad as actu from sujetos_familia where baja is null and fami_legajo=".$lega." order by fami_paren");
@@ -95,7 +95,7 @@ echo "</td><td><strong>".$da['fami_ocup'];
 
 <table class="table">
 
-<tr class="bg-primary"><th>Escuela</th><th>Localidad</th><th>Cuando</th><th>Ult.Nivel Cursado</th><th>Referente y Turno</th><th>Obs.</th></tr>
+<tr class="bg-primary text-white"><th>Escuela</th><th>Localidad</th><th>Cuando</th><th>Ult.Nivel Cursado</th><th>Referente y Turno</th><th>Obs.</th></tr>
 
 <?php 
 

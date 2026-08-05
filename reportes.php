@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Reportes del Sistema";
-include("encabezado.php");
+include("encabezado-test.php");
 if ($_SESSION['gl_usuarios']!="1") redirect('error_noautorizado');
 
 ?>

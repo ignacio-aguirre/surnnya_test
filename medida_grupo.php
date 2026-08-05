@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Replicar en miembros del grupo";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["archivo"];
 $lega=$_GET["legajo"];
 $fecha=fsql($_GET["fecha"]);

@@ -2,7 +2,7 @@
 session_start();
 include("Funciones.php");
 $_SESSION["prestacion"]="Editar Solicitud";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $r=un_registro("select * from es_participaciones where id=".$id);
 $nnya="";

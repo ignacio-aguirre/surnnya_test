@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Dispositivos de Alojamiento";
-include("encabezado.php");?>
+include("encabezado-test.php");?>
 </div>
 <div class="container">
 

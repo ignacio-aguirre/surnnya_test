@@ -61,7 +61,7 @@ $_SESSION['Hospitales']=$_SESSION['Hospitales']."<option value='".$h["idsalud_es
 };
 
 
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class='container'>

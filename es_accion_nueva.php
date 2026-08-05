@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Registrar Acci&oacute;n Equipo de Salud";
-include("encabezado.php");
+include("encabezado-test.php");
 $solicitud=nget("solicitud");
 $r=un_registro("select * from es_participaciones where id=".$solicitud);
 $ult_dispositivo=un_campo("select dispositivo from es_acciones where solicitud=".$solicitud." order by fecha desc, id desc limit 1");

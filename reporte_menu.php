@@ -4,7 +4,7 @@ session_start();
 $id=nget("id");
 if($id=="0") {Redirect("reportes");};
 $_SESSION["prestacion"]="Agregar a Otro Men&uacute; Reporte Id=".$id;
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Env&iacuteo de medidas por mail";
 if (!isset($_SESSION['gldispo'])) header ("Location: index.php");
-include("encabezado.php");
+include("encabezado-test.php");
 $esta="A";
 $hogar="";
 

@@ -67,7 +67,7 @@ function robusta(t){
 <?php
 $_SESSION["prestacion"]="Cambiar Contrase&ntilde;a Propia";
 $_SESSION["sinmenu"]="1";
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 
 $actual=un_registro("select password as contra from usuarios where id=".$_SESSION['glidusua']);

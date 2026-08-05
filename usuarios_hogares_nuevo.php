@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Nuevo usuario de hogares";
-include("encabezado.php");
+include("encabezado-test.php");
 $hogar=nget("hogar");
 
 ?>

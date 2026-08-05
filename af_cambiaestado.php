@@ -5,7 +5,7 @@ $id=$_GET["id"];
 $r=un_registro("select * from af_familias where idaf_familias=".$id);
 $cantidad=un_campo("select count(*) from hogares_admision where admi_alta is not null and admi_baja is null and admi_hogar=".$r["hogar"]." and admi_fami=".$id);
 $_SESSION["prestacion"]="Registrar cambio de estado familia ".$r["denominacion"];
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

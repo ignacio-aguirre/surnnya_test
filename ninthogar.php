@@ -6,7 +6,7 @@ $hogar=$_GET["hogar"];
 $familia="0";
 if(isset($_GET["familia"])) $familia=$_GET["familia"];
 $_SESSION["prestacion"]="Nueva Acci&oacute;n - Hogar/Dispositivo ".un_campo("select nombre from dispositivos where dispositivos.id=".$hogar);
-include("encabezado.php");
+include("encabezado-test.php");
 if(isset($_GET["tipo"])) {ejecute("insert into hogares_intervenciones(fecha,hogar,familia,supervisores,texto,usuario,tipo) values(".fsql($_GET["fecha"]).",".$hogar.",".$familia.",'".$_GET["super"]."',".tsql($_GET["detalle"]).",'".$_SESSION["glusua"]."',".$_GET["tipo"].")");
 
   Redirect(si($familia!="0","af_familias?id=".$familia,"consultahogar?id=".$hogar));};

@@ -3,7 +3,7 @@ require("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Nueva Familia";
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 
 if(isset($_GET["id"])) { $id=$_GET["id"];};
 $hoga="";

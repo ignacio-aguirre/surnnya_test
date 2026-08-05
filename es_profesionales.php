@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 $sql="select es_profesionales.*, deno, usuarios.apellido as uape, usuarios.nombre as unom,
 (select count(*) from es_participaciones where fecha_rechazo is null and fecha_fin is null and fecha_inicio is not null and profesional=es_profesionales.id) as casos from es_profesionales left join tablas on tipo='ESESP' and valo=profesion
  left join usuarios on usuario=usuarios.id  where es_profesionales.baja is null order by es_profesionales.apellido, es_profesionales.nombre";

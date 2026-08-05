@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 $prof=un_campo("select id from es_profesionales where usuario=".$_SESSION["glidusua"]);
 if($prof=="") die("Tu usuario no tiene profesional asociado");

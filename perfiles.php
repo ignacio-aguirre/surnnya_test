@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 $sql="select perfiles.*, menues.nombre,(select count(*) from usuarios where perfil=perfiles.id and baja is null) as cantidad from perfiles left join menues on menu_nuevo=idmenues order by denominacion";
 $reg = registros($sql);
 $cant = mysqli_num_rows($reg);?>

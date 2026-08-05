@@ -5,7 +5,7 @@ $legajo=$_GET["legajo"];
 $familia=$_SESSION["temp_ffv"];
 if(!$familia>0){Redirect("salir");};
 $_SESSION["prestacion"]="Agregar NNYA a la Familia ".un_campo("select descripcion from fv_familias where idfv_familias=".$familia);
-include("encabezado.php");
+include("encabezado-test.php");
 $nnya=un_registro("select sujetos.*,tablas.deno, edadcalc(f_nacimiento,sujetosedad,sujetosmeses,sujetosactedad,curdate()) as eda 
  from sujetos left join tablas on tablas.tipo='TD' and tablas.valo=tipodni 
  where sujetos.legajo=".$legajo);

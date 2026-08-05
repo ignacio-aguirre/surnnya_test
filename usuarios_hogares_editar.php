@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 $id=nget("id");
 $_SESSION["prestacion"]="Editar datos de usuario de hogares";
-include("encabezado.php");
+include("encabezado-test.php");
 $r=un_registro("select * from usuarios_hogares where id=".$id);
 $hogar=$r["hogar"];
 if(isset($_GET["hogar"])){$hogar=nget("hogar");};

@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Eliminar localidad";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $l=un_registro("select localidades_nueva.*, paises.descripcion as npais from localidades_nueva left join paises on pais=idpaises where id=".$id);
 ?>

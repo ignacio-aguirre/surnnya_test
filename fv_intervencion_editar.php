@@ -4,7 +4,7 @@ session_start();
 $id=$_GET["id"];
 $familia=un_campo("select familia from fv_participaciones where id=".$id);
 $_SESSION["prestacion"]="Editar Intervenci&oacute;n con la Familia ".un_campo("select descripcion from fv_familias where idfv_familias=".$familia);
-include("encabezado.php");
+include("encabezado-test.php");
 $r=un_registro("select * from fv_participaciones where id=".$id);
 ?>
 </div>

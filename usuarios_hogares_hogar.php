@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 
 $_SESSION["prestacion"]="Dispositivo y Funci&oacute;n de usuario de hogar";
-include("encabezado.php");
+include("encabezado-test.php");
 $id=nget("id");
 $r=un_registro("select * from usuarios_hogares where baja is null and id=".$id);
 ?>

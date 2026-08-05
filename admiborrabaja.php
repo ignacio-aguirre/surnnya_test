@@ -4,7 +4,7 @@ session_start();
 $_SESSION["prestacion"]="Eliminar Egreso de Hogar";
 if (!isset($_SESSION['gldispo'])) header ("Location: salir");
 registre();
-include("encabezado.php");
+include("encabezado-test.php");
 $id=$_GET["id"];
 $sql="select concat(apellidos,', ',nombres) as apyn,vacante, altasybajas.legajo,fecha_operacion, hogar,nombre as dhogar from altasybajas left join sujetos on sujetos.legajo=altasybajas.legajo left join dispositivos on dispositivos.id=altasybajas.hogar where idaltasybajas=".$id;
 $r = un_registro($sql);

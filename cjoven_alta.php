@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Nueva Alta en Casa Joven";
-include("encabezado.php");
+include("encabezado-test.php");
 $legajo=$_GET["legajo"];
 $cantidad=un_campo("select count(*) from cjoven_nomina where legajo=".$legajo);
 $activas=un_campo("select count(*) from cjoven_nomina where legajo=".$legajo." and baja is null");

@@ -2,7 +2,7 @@
 session_start();
 include("Funciones.php");
 $_SESSION["prestacion"]="Informe Solicitud a Gabinete de Salud";
-include("encabezado.php");
+include("encabezado-test.php");
 $solicitud=nget("id");
 $r=un_registro("select * from es_participaciones where id=".$solicitud);
 

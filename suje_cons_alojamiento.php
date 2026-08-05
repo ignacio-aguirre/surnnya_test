@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION['prestacion']="Alojamiento en Hogares del Circuito";
-include('encabezado.php');
+include('encabezado-test.php');
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: index");
 registre();
 $lega= $_GET["legajo"];
@@ -16,7 +16,7 @@ include("mnu_superior.php");
 <h3>Historial de Alojamientos en Hogares</h3>
 <div class="table-responsive">
 <table class="table table-striped table-bordered table-condensed">
-<thead><tr class="bg-primary"><td>Dispositivo</td><td>Familia</td><td>Desde</td><td>Hasta</td><td>D&iacute;as</td><td>Perm Anterior</td><td>M.Ingreso</td><td>M.Egreso</td></tr></thead>
+<thead><tr class="bg-primary text-white"><td>Dispositivo</td><td>Familia</td><td>Desde</td><td>Hasta</td><td>D&iacute;as</td><td>Perm Anterior</td><td>M.Ingreso</td><td>M.Egreso</td></tr></thead>
 <?php
 $dt=un_registro("select * from sujetos where legajo=".$lega);
 $conn=registros("select nombre as hogar, af_familias.denominacion, admi_alta, admi_baja,case when admi_baja is null then datediff(curdate(),admi_alta)+1 else permanencia end as dias , perm_anterior,ming.deno as mingre, hogares_motegreso.deno as megre,
@@ -73,7 +73,7 @@ seleccionar("ctx3","<?php echo $dt['ctex3'];?>");
 <div class="table-responsive pre-scrollable">
 <table class="table">
 <thead>
-<tr class="bg-primary"><th>Fecha</th><th>Estrategia</th><th>Estado</th><th>Acciones</th><th>Usuario</th></tr>
+<tr class="bg-primary text-white"><th>Fecha</th><th>Estrategia</th><th>Estado</th><th>Acciones</th><th>Usuario</th></tr>
 </thead>
 <?php
 $reg=registros("select sujetos_estrategias.*, t1.deno as estra, t2.deno as esta  from sujetos_estrategias left join tablas t1 on t1.tipo='EE' and t1.valo=estrategia left join tablas t2 on t2.tipo='ETEE' and t2.valo=estado where legajo=".$lega." order by fecha desc, idsujetos_estrategias desc");

@@ -2,7 +2,7 @@
 include("Funciones.php"); 
 session_start();
 $_SESSION["prestacion"]="Edici&oacute;n Datos Escolares";
-include("encabezado.php");
+include("encabezado-test.php");
 if (isset($_GET['lega']))
 {
 $esco=$_GET["escu"];

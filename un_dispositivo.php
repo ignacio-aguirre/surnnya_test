@@ -9,7 +9,7 @@ $ong="0";
 if(isset($_GET["ong"])){$ong=nget("ong");};
 $_SESSION["prestacion"]="Datos Dispositivo";
 $r=un_registro("select * from dispositivos where dispositivos.id=".$id);
-include("encabezado.php");?>
+include("encabezado-test.php");?>
 </div>
 <div class="container">
 <form class="form-inline" method="get" onsubmit="return valida()" action="un_dispositivo_do">

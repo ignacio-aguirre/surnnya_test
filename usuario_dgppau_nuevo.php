@@ -4,7 +4,7 @@ session_start();
 $_SESSION["prestacion"]="Nuevo Usuario";
 
 if ($_SESSION['glidperfil']!="73") Redirect('error_noautorizado');
-include("encabezado.php");
+include("encabezado-test.php");
 $dis =registros("select id, denominacion from sectores where baja is null and denominacion like '%DGPPAU%' order by denominacion");
 $dispo ="";
 while ($d = mysqli_fetch_assoc($dis)) {

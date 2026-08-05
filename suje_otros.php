@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION['prestacion']="Otros";
-include('encabezado.php');
+include('encabezado-test.php');
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: .");
 registre();
 $lega= $_GET["legajo"];
@@ -11,7 +11,7 @@ $r=un_registro("select f_adop_decretada,cud,decreto_5 from sujetos where legajo=
 $tipo="";
 if ($lega=="" ) Redirect("Location: consultasujetos");
 
-$_SESSION["posicion"]="9";
+$_SESSION["posicion"]="10";
 include("mnu_superior.php");
 ?>
 </div>

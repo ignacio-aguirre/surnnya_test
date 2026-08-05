@@ -1,42 +1,174 @@
 <?php
-echo '<nav class="navbar navbar-inverse">
+/*
+ * Menú de consulta de sujetos compatible con Bootstrap 4.
+ * Mantiene la lógica original y muestra los ítems en una sola línea.
+ *
+ * Requisitos:
+ * - Bootstrap 4 cargado en la página.
+ * - Variables disponibles: $_SESSION y $lega.
+ * - Funciones disponibles: un_campo() y un_registro().
+ */
 
-  <div class="container-fluid">
+$posicion = isset($_SESSION["posicion"]) ? (string) $_SESSION["posicion"] : "";
+$perfil   = isset($_SESSION["glidperfil"]) ? (string) $_SESSION["glidperfil"] : "";
 
-    <div class="collapse navbar-collapse" id="myNavbar">
-
-      <ul class="nav navbar-nav">
-
-        <li'.si($_SESSION["posicion"]=="1"," class='active'","").'><a href="suje_cons_duros?legajo='.$lega.'">Principal</a></li>
-
-        <li'.si($_SESSION["posicion"]=="2"," class='active'","").'><a href="suje_cons_alojamiento?legajo='.$lega.'">Alojamiento</a></li>
-
-        <li'.si($_SESSION["posicion"]=="3"," class='active'","").'><a href="suje_cons_familiaescuela?legajo='.$lega.'">Familia/Escolaridad</a></li>
-
-        <li'.si($_SESSION["posicion"]=="4"," class='active'","").'><a href="suje_cons_juridicos?legajo='.$lega.'">Jur&iacute;dicos</a></li>
-        <li'.si($_SESSION["posicion"]=="5"," class='active'","").'><a href="suje_cons_archivos?legajo='.$lega.'">Archivos</a></li>
-        
-	<li'.si($_SESSION["posicion"]=="6"," class='active'","").'><a href="suje_cons_trimestrales?legajo='.$lega.'">Trimestrales</a></li>
-        <li'.si($_SESSION["posicion"]=="7"," class='active'","").'><a href="suje_cons_salud?legajo='.$lega.'">Salud</a></li>
-        <li'.si($_SESSION["posicion"]=="8"," class='active'","").'><a href="suje_cons_vivienda?legajo='.$lega.'">Vivienda</a></li>
-<li'.si($_SESSION["posicion"]=="10"," class='active'","").'><a href="suje_otros?legajo='.$lega.'">Otros</a></li>br>';
-if($_SESSION["glidperfil"]=="47"){
-echo '<li'.si($_SESSION["posicion"]=="11"," class='active'","").'><a href="suje_cons_pae?legajo='.$lega.'">Datos PAE</a></li><br>';
-};
-echo '<li class="active"><a href="#">'.un_campo("select concat(apellidos,',',nombres,' ',legajo) as cosa from sujetos where legajo=".$lega).'</a></li>';
-$grup=un_registro("select * from grupos left join grupos_legajos on idgrupos=grupo where grupo_legajo=".$lega);
-if(!is_null($grup)) {echo '<li class="active"><a href="grupos2?id='.$grup['idgrupos'].'">Grupo de hermanos</a></li>';};
-$fami=un_registro("select * from fv_familias_miembros left join fv_familias on familia=idfv_familias where legajo=".$lega);
-if(!is_null($fami)) {echo '<li class="active"><a href="#">Grupo familiar '.$fami["descripcion"].' Legajo '.$fami["legajomanual"].'</a></li>';};
-
-echo '<li class="active"><a href="consultasujetos">Volver a B&uacute;squeda</a></li></ul>
-    </div>
-
-  </div>
-
-</nav>';
-
-
-
+/**
+ * Devuelve las clases correspondientes para cada opción del menú.
+ */
+function claseMenu($numero, $posicion)
+{
+    return ((string) $numero === (string) $posicion)
+        ? 'nav-item active nav-item-active'
+        : 'nav-item';
+}
 ?>
 
+<style>
+/* Mantiene todos los elementos del menú en una sola línea. */
+.navbar-sujetos {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.navbar-sujetos .navbar-nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.navbar-sujetos .nav-item {
+    white-space: nowrap;
+}
+
+/* Clase personalizada conservada del código original. */
+.navbar-sujetos .nav-item-active > .nav-link,
+.navbar-sujetos .nav-item.active > .nav-link {
+    font-weight: 600;
+}
+</style>
+
+<nav class="navbar navbar-expand navbar-light bg-light navbar-sujetos">
+
+    <a class="navbar-brand" href="consultasujetos">
+        B&uacute;squeda
+    </a>
+
+    <div class="navbar-collapse">
+        <ul class="navbar-nav flex-row flex-nowrap">
+
+            <li class="<?php echo claseMenu(1, $posicion); ?>">
+                <a class="nav-link" href="suje_cons_duros?legajo=<?php echo urlencode($lega); ?>">
+                    Principal
+                </a>
+            </li>
+
+            <li class="<?php echo claseMenu(2, $posicion); ?>">
+                <a class="nav-link" href="suje_cons_alojamiento?legajo=<?php echo urlencode($lega); ?>">
+                    Alojamiento
+                </a>
+            </li>
+
+            <li class="<?php echo claseMenu(3, $posicion); ?>">
+                <a class="nav-link" href="suje_cons_familiaescuela?legajo=<?php echo urlencode($lega); ?>">
+                    Familia/Escolaridad
+                </a>
+            </li>
+
+            <li class="<?php echo claseMenu(4, $posicion); ?>">
+                <a class="nav-link" href="suje_cons_juridicos?legajo=<?php echo urlencode($lega); ?>">
+                    Jur&iacute;dicos
+                </a>
+            </li>
+
+            <li class="<?php echo claseMenu(5, $posicion); ?>">
+                <a class="nav-link" href="suje_cons_archivos?legajo=<?php echo urlencode($lega); ?>">
+                    Archivos
+                </a>
+            </li>
+
+            <li class="<?php echo claseMenu(6, $posicion); ?>">
+                <a class="nav-link" href="suje_cons_trimestrales?legajo=<?php echo urlencode($lega); ?>">
+                    Trimestrales
+                </a>
+            </li>
+
+            <li class="<?php echo claseMenu(7, $posicion); ?>">
+                <a class="nav-link" href="suje_cons_salud?legajo=<?php echo urlencode($lega); ?>">
+                    Salud
+                </a>
+            </li>
+
+            <li class="<?php echo claseMenu(8, $posicion); ?>">
+                <a class="nav-link" href="suje_cons_vivienda?legajo=<?php echo urlencode($lega); ?>">
+                    Vivienda
+                </a>
+            </li>
+
+            <li class="<?php echo claseMenu(10, $posicion); ?>">
+                <a class="nav-link" href="suje_otros?legajo=<?php echo urlencode($lega); ?>">
+                    Otros
+                </a>
+            </li>
+
+            <?php if ($perfil === "47") { ?>
+                <li class="<?php echo claseMenu(11, $posicion); ?>">
+                    <a class="nav-link" href="suje_cons_pae?legajo=<?php echo urlencode($lega); ?>">
+                        Datos PAE
+                    </a>
+                </li>
+            <?php } ?>
+
+            <?php
+            $datosSujeto = un_campo(
+                "select concat(apellidos,', ',nombres,' ',legajo) as cosa
+                 from sujetos
+                 where legajo=" . (int) $lega
+            );
+            ?>
+
+            <li class="nav-item nav-item-active">
+                <a class="nav-link" href="#">
+                    <?php echo htmlspecialchars($datosSujeto, ENT_QUOTES, 'UTF-8'); ?>
+                </a>
+            </li>
+
+            <?php
+            $grup = un_registro(
+                "select *
+                 from grupos
+                 left join grupos_legajos on idgrupos=grupo
+                 where grupo_legajo=" . (int) $lega
+            );
+
+            if (!is_null($grup)) {
+            ?>
+                <li class="nav-item nav-item-active">
+                    <a class="nav-link" href="grupos2?id=<?php echo urlencode($grup["idgrupos"]); ?>">
+                        Grupo de hermanos
+                    </a>
+                </li>
+            <?php } ?>
+
+            <?php
+            $fami = un_registro(
+                "select *
+                 from fv_familias_miembros
+                 left join fv_familias on familia=idfv_familias
+                 where legajo=" . (int) $lega
+            );
+
+            if (!is_null($fami)) {
+            ?>
+                <li class="nav-item nav-item-active">
+                    <a class="nav-link" href="#">
+                        Grupo familiar
+                        <?php echo htmlspecialchars($fami["descripcion"], ENT_QUOTES, 'UTF-8'); ?>
+                        Legajo
+                        <?php echo htmlspecialchars($fami["legajomanual"], ENT_QUOTES, 'UTF-8'); ?>
+                    </a>
+                </li>
+            <?php } ?>
+
+        </ul>
+    </div>
+</nav>

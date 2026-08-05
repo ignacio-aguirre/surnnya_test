@@ -1,7 +1,7 @@
 <?php
 include("Funciones.php");
 session_start();
-include("encabezado.php");
+include("encabezado-test.php");
 registre();
 $fecha=$_SESSION["DiaHoy"];
 if(isset($_GET["fecha"])) {$fecha=$_GET["fecha"];};

@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION['prestacion']="Actualizaciones de Estrategia de Egreso";
-include('encabezado.php');
+include('encabezado-test.php');
 if (!isset($_SESSION['gldispo'])|!isset($_GET['legajo'])) header ("Location: index");
 $lega= $_GET["legajo"];
 if ($lega=="" ) Redirect("Location: consultasujetos");

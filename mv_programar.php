@@ -2,7 +2,7 @@
 session_start();
 require("funciones.php"); 
 $_SESSION["prestacion"]="Programar nuevo viaje";
-include("encabezado.php");
+include("encabezado-test.php");
 $hoy_laborable=un_campo("select laborable from fechas where fecha=curdate()");
 if($hoy_laborable=="0"){
 $oper=un_registro("select * from movil_procesos where fecha_hoy=curdate() and estado_operativo ='FIND' order by id desc limit 1");  

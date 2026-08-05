@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="Registrar nueva localidad";
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">

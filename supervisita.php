@@ -3,7 +3,7 @@ include("Funciones.php");
 session_start();
 if($_SESSION['gl_super_super']!="1"){Redirect("error_noautorizado");};
 $_SESSION["prestacion"]="Visita a Dispositivo de Cuidado";
-include("encabezado.php");
+include("encabezado-test.php");
 registre();
 $id=$_GET['id'];
 if(isset($_GET['enviar'])){

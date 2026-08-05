@@ -2,7 +2,7 @@
 include("Funciones.php");
 session_start();
 $_SESSION["prestacion"]="B&uacute;squeda de NNYA";
-include("encabezado.php");
+include("encabezado-test.php");
 $pedidorecurso="0";
 $pedidopae="0";
 $inclusionpae="0";
@@ -29,7 +29,7 @@ $frase="";
 if (isset($_GET["frase"])) $frase=trim($_GET["frase"]);
 
 ?>
-
+<div class="container">
 <h3>Encontr&aacute; el legajo de un NNYA a partir de un texto</h3>
 <form class="form-inline" method="get" action="consultasujetos" onsubmit="return valida_datos()">
 

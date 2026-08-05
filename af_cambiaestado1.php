@@ -4,7 +4,7 @@ session_start();
 $id=$_GET["id"];
 $r=un_registro("select * from af_familias where idaf_familias=".$id);
 $_SESSION["prestacion"]="Registrar cambio de estado 1 familia ".$r["denominacion"];
-include("encabezado.php");
+include("encabezado-test.php");
 ?>
 </div>
 <div class="container">
